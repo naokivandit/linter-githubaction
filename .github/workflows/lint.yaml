@@ -1,16 +1,16 @@
 name: Lint Swagger
 
 on:
- push:
+  push:
       paths:
       - "task/swagger.yaml"
         
 jobs:
     setup-lint:
-        name: Setup
+        name: Lint swagger
         runs-on: ubuntu-latest
         steps:
-            - name: setup Node environment
+            - name: Setup Node Environment
               uses: actions/setup-node@v1
               with:
                node-version: '12'
@@ -18,7 +18,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v2
 
-            - name: install spectral
+            - name: Install spectral
               run: npm install -g @stoplight/spectral
 
             - name: Lint
