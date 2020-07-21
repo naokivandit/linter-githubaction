@@ -1,7 +1,9 @@
 name: Lint Swagger
 
 on:
-    push:
+ push:
+      paths:
+      - "task/swagger.yaml"
         
 jobs:
     setup-lint:
@@ -15,18 +17,6 @@ jobs:
                
             - name: Checkout
               uses: actions/checkout@v2
-
-            - name: test
-              run: npm -v
-              
-            - name: test2
-              run: pwd
-           
-            - name: test3
-              run: ls
-             
-            - name: test4
-              run: ls task/
 
             - name: install spectral
               run: npm install -g @stoplight/spectral
