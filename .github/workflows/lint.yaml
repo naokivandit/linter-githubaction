@@ -21,5 +21,5 @@ jobs:
             - name: Install spectral
               run: npm install -g @stoplight/spectral
 
-            - name: Lint
+            - name: Lint swagger
               run: spectral lint task/swagger.yaml
