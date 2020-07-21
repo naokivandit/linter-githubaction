@@ -4,21 +4,22 @@ env:
 
 on:
     push:
-        jobs:
-            setup-lint:
-                name: Setup
-                runs-on: ubuntu-latest
-                steps:
-                    - name: setup Node environment
-                      uses: actions/setup-node@v1
-                      with:
-                        node-version: '12'
+        
+jobs:
+    setup-lint:
+        name: Setup
+        runs-on: ubuntu-latest
+        steps:
+            - name: setup Node environment
+              uses: actions/setup-node@v1
+              with:
+               node-version: '12'
 
-                    - name: test
-                      run: npm -v
+            - name: test
+              run: npm -v
 
-                    - name: install spectral
-                      run: npm install -g @stoplight/spectral
-                      
-                    - name: Lint
-                      run: spectral lint task/swagger.yaml
+            - name: install spectral
+              run: npm install -g @stoplight/spectral
+
+            - name: Lint
+              run: spectral lint task/swagger.yaml
