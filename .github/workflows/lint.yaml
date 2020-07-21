@@ -15,6 +15,9 @@ jobs:
 
             - name: test
               run: npm -v
+              
+            - name: test2
+              run: pwd
 
             - name: install spectral
               run: npm install -g @stoplight/spectral
