@@ -9,10 +9,15 @@ on:
                 name: Setup
                 runs-on: ubuntu-latest
                 steps:
-                    - name: npm install
-                    run: |
-                      npm install -g @stoplight/spectral .
+                    - name: setup Go environment
+                    uses: actions/setup-go@v1
+                    with:
+                      go-version: "1.14"
+
+                    # - name: spectral install
+                    # run: |
+                    #   npm install -g @stoplight/spectral
                     
-                    - name: Lint
-                    run: |
-                      spectral lint task/swagger.yaml
+                    # - name: Lint
+                    # run: |
+                    #   spectral lint task/swagger.yaml
