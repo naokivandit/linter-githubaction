@@ -1,0 +1,10 @@
+openapi: 3.0.0
+
+servers:
+  - description: sample API
+  - url: http://localhost:4010
+info:
+  version: 1.0.0
+  title: Sample API
+  license:
+    name: naoki ishii
