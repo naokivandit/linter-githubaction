@@ -1,7 +1,5 @@
 name: Lint Swagger
 
-env:
-
 on:
     push:
         
