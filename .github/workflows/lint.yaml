@@ -14,7 +14,11 @@ on:
                       with:
                         node-version: '12'
 
-                    - name: spectral install
+                    - name: test
+                    run: |
+                        npm -v
+
+                    - name: install spectral
                     run: |
                       npm install -g @stoplight/spectral
                     
