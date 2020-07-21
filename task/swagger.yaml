@@ -4,7 +4,45 @@ servers:
   - description: sample API
   - url: http://localhost:4010
 info:
+  contact: "contact"
+  description: "description"
   version: 1.0.0
   title: Sample API
   license:
     name: naoki ishii
+
+paths:
+  /tasks:
+    get:
+      operationId: "operationId"
+      description: "description tasks"
+      tags:
+        - tasks
+      parameters:
+        - in: 
+          name : id
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/task"
+
+#components
+components:
+  schemas:
+    task:
+      required:
+        - id
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 1
+        name:
+          type: string
+          example: "task1"
