@@ -9,10 +9,10 @@ on:
                 name: Setup
                 runs-on: ubuntu-latest
                 steps:
-                    - name: setup Go environment
-                    uses: actions/setup-go@v1
-                    with:
-                      go-version: "1.14"
+                    # - name: setup Go environment
+                    # uses: actions/setup-go@v1
+                    # with:
+                    #   go-version: "1.14"
 
                     # - name: spectral install
                     # run: |
