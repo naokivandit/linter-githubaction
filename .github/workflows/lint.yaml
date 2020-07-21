@@ -18,9 +18,15 @@ jobs:
               
             - name: test2
               run: pwd
+           
+            - name: test3
+              run: ls
+             
+            - name: test4
+              run: ls task/
 
             - name: install spectral
               run: npm install -g @stoplight/spectral
 
             - name: Lint
-              run: spectral lint ./../../task/swagger.yaml
+              run: spectral lint task/swagger.yaml
