@@ -12,8 +12,6 @@ jobs:
         steps:
             - name: Setup Node Environment
               uses: actions/setup-node@v1
-              with:
-               node-version: '12'
                
             - name: Checkout
               uses: actions/checkout@v2
