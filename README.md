@@ -1,1 +1,2 @@
-GithubActionsでリンターを行う
+# Description
+GithubActionsでSwaggerのリンターを行うワークフローを作成
